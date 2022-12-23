@@ -1,0 +1,111 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #f6f6f6;
+}
+.App{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.intro{
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+.timeline{
+  position: relative;
+  width: 80%;
+  height: auto;
+  padding: 0.4rem;
+  padding-top: 0;
+  padding-left: 0;
+  margin-left: 0;
+}
+.timeline::before{
+  position: absolute;
+  left: calc(50% + 2.5px);
+  content: "";
+  width: 5px;
+  background-color: black;
+  height: 100%;
+}
+.an-instance{
+  width: 45%;
+  height: fit-content;
+  border-radius: 5px;
+  margin: 0.2rem;
+  margin-bottom: 0.5rem;
+  padding: 0.3rem;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.an-instance:nth-child(odd){
+  transform: translateX(calc(100% + 22%));
+}
+.an-instance:nth-child(odd) > .pointer{
+  z-index: -9999;
+  left: -10px !important;
+  top: calc(50% - 10px);
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  width: 20px;
+  height: 20px;
+  transform: rotate(45deg);
+}
+.timeline:first-child{
+  margin-top: 0.4rem;
+}
+.tag{
+  padding: 0.2rem;
+  width: auto;
+  background-color: rgb(2, 205, 2);
+  color: white;
+  font-family: "Poppins";
+  display: flex;
+  justify-content: space-between;
+}
+.whathappened{
+  height: 50px;
+}
+.date{
+  margin-top: 10px;
+  font-size: 10px;
+}
+.pointer{
+  left: calc(100% - 10px);
+  top: calc(50% - 10px);
+  position: absolute;
+  background-color: #ffffff;
+  width: 20px;
+  height: 20px;
+  transform: rotate(45deg);
+}
+.circle{
+  z-index: 9999;
+  top: calc(50% - 12.5px);
+  left: calc(100% + 9.5%);
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid green;
+  outline: #f6f6f6;
+  width: 25px;
+  height: 25px;
+  background-color: rgb(255, 255, 255);
+}
+.an-instance:nth-child(odd) > .circle{
+  z-index: 9999;
+  left: -12.5% !important;
+  top: calc(50% - 10px);
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  width: 25px;
+  height: 25px;
+  border: 3px solid green;
+  outline: #f6f6f6;
+}
